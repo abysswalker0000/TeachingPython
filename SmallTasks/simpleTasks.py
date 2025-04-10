@@ -36,6 +36,24 @@ new_nums = list(new_nums)
 new_nums.sort()
 print(new_nums[-2])
 
+store1 = [120, 150, 80, 200, 130] 
+store2 = [100, 140, 110, 180, 150]
+pairs = list(zip(store1,store2))
+max_diff = -1
+diff_sum = 0
+print(pairs)
+for i, stores in enumerate(pairs):
+    store1_prices , store2_prices = stores
+    diff = abs(store1_prices-store2_prices)
+    if diff > max_diff:
+        max_diff = diff
+        top_day = i+1
+    diff_sum += diff
+    if (store1_prices-store2_prices > 0):
+        print(f"Store 1 had better sales on day {i+1} with diff = {diff}")
 
+mean_diff = diff_sum/len(store1)
+print(f"Mean difference is {mean_diff}")
+print(f"Highest differece between 2 stores is {max_diff} on day {top_day}")
 
 
