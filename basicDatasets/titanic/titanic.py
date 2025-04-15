@@ -46,7 +46,7 @@ print(children_by_class)
 sns.barplot(data=children_by_class, x="Survived_Count", y="Pclass")
 plt.xlabel("Количество выживших")
 plt.ylabel("Класс")
-plt.show(  )
+plt.show()
 
 
 sns.barplot(data=df, x="Embarked", y="Age", estimator="mean")
@@ -55,23 +55,23 @@ plt.ylabel("Возраст")
 # plt.show()
 
 sns.countplot(x = "Pclass", hue = "Survived", data = df)
-plt.title = "Выжившие по классам"
+plt.title("Выжившие по классам")
 # plt.show()
 
 sns.histplot(data=df, x="Age", hue="Survived", bins=40)
-plt.title = "Гистограмма выживших по возрасту"
+plt.title("Гистограмма выживших по возрасту")
 plt.xlabel("Возраст")
 plt.ylabel("Количество")
 # plt.show()
 
 sns.boxplot(data=df, y="Fare", x="Pclass")
-plt.title = "Распределение стоимости билетов по классам"
+plt.title("Распределение стоимости билетов по классам")
 plt.xlabel("Класс")
 plt.ylabel("Стоимость билета")
 # plt.show()
 
 sns.scatterplot(data=df, y = "Age", x="Fare", hue="Survived")
-plt.title = "Зависимость возраста и стоимости билета"
+plt.title("Зависимость возраста и стоимости билета")
 plt.xlabel("Цена")
 plt.ylabel("Возраст")
 # plt.show()
