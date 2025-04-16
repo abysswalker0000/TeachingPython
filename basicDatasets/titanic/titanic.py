@@ -14,6 +14,7 @@ def get_age_category(age):
 df["Категория возраста"] = df["Age"].apply(get_age_category)
 filtered_passengers = df[(df["Pclass"] == 1) & (df["Survived"] == 1)]
 
+
 filtered_passengers = filtered_passengers.sort_values(by = "Fare", ascending = False)
 
 age_counts = df["Категория возраста"].value_counts()
@@ -46,7 +47,7 @@ print(children_by_class)
 sns.barplot(data=children_by_class, x="Survived_Count", y="Pclass")
 plt.xlabel("Количество выживших")
 plt.ylabel("Класс")
-plt.show()
+# plt.show()
 
 
 sns.barplot(data=df, x="Embarked", y="Age", estimator="mean")
